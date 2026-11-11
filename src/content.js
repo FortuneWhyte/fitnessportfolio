@@ -41,3 +41,29 @@ export const stats = [
   { value: '6–8', label: 'Week Transformations' },
   { value: 'YES', label: 'CPR/AED Certified' },
 ]
+
+// Badge icons: 'certificate' | 'graduation-cap' | 'football'
+export const about = {
+  label: 'Section 01',
+  headline: ['ATHLETE FIRST.', 'COACH ALWAYS.'],
+  body: "I've trained consistently for 6+ years as a football and track & field athlete. Since 2023 I've coached clients one-on-one and led small-group boot camps, building programs around each person's goals, fitness level and injury history.",
+  image: '',
+  imageAlt: 'Portrait of Fortune Whyte',
+  badges: [
+    {
+      icon: 'certificate',
+      title: 'Standard First Aid + CPR Level C & AED',
+      subtitle: 'Valid to 2028',
+    },
+    {
+      icon: 'graduation-cap',
+      title: 'Personal Trainer Certification',
+      subtitle: 'In Progress',
+    },
+    {
+      icon: 'football',
+      title: 'Football & Track & Field Athlete',
+      subtitle: '6+ Years Strength & Conditioning',
+    },
+  ],
+}
