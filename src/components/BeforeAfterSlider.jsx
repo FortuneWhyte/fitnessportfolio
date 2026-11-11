@@ -1,5 +1,7 @@
-import { useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { Image as ImageIcon } from '@phosphor-icons/react'
+
+const clamp = (value) => Math.min(100, Math.max(0, value))
 
 export default function BeforeAfterSlider({
   before,
@@ -8,10 +10,47 @@ export default function BeforeAfterSlider({
   afterAlt = 'After',
   className = '',
 }) {
-  const [position] = useState(50)
+  const sliderRef = useRef(null)
+  const [position, setPosition] = useState(50)
+  const [dragging, setDragging] = useState(false)
+
+  const moveTo = useCallback((clientX) => {
+    const rect = sliderRef.current?.getBoundingClientRect()
+    if (!rect || rect.width === 0) return
+    setPosition(clamp(((clientX - rect.left) / rect.width) * 100))
+  }, [])
+
+  const handlePointerDown = (event) => {
+    // Primary mouse button, any touch or pen contact
+    if (event.pointerType === 'mouse' && event.button !== 0) return
+    event.currentTarget.setPointerCapture(event.pointerId)
+    setDragging(true)
+    moveTo(event.clientX)
+  }
+
+  const handlePointerMove = (event) => {
+    if (!dragging) return
+    moveTo(event.clientX)
+  }
+
+  const stopDragging = (event) => {
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId)
+    }
+    setDragging(false)
+  }
 
   return (
-    <div className={`comparison-slider ${className}`.trim()}>
+    <div
+      ref={sliderRef}
+      className={['comparison-slider', dragging && 'is-dragging', className]
+        .filter(Boolean)
+        .join(' ')}
+      onPointerDown={handlePointerDown}
+      onPointerMove={handlePointerMove}
+      onPointerUp={stopDragging}
+      onPointerCancel={stopDragging}
+    >
       <div className="absolute top-4 left-4 z-30 bg-black/60 px-4 py-1 text-[10px] font-bold tracking-widest uppercase rounded">
         Before
       </div>
