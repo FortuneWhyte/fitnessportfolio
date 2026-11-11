@@ -22,7 +22,7 @@ export default function Strengths() {
         </div>
 
         <div className="bg-accent p-12 rounded-2xl flex flex-col justify-center items-center text-white text-center shadow-[0_0_50px_rgba(255,61,0,0.2)]">
-          <p className="font-heading text-9xl leading-none">{highlight.value}</p>
+          <p className="font-heading text-7xl min-[380px]:text-8xl sm:text-9xl leading-none whitespace-nowrap">{highlight.value}</p>
           <p className="font-heading text-5xl leading-none mb-4 uppercase">{highlight.unit}</p>
           <p className="text-sm font-bold uppercase tracking-widest max-w-xs">{highlight.caption}</p>
         </div>
