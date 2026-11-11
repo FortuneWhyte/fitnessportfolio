@@ -55,4 +55,18 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
     color: transparent;
   }
+
+  /* Before / after comparison slider */
+  .comparison-slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
+
+  .comparison-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
