@@ -95,3 +95,43 @@ export const services = {
     },
   ],
 }
+
+export const results = {
+  label: 'Section 03',
+  headline: ['REAL CLIENTS.', 'REAL RESULTS.'],
+  intro: 'Documented progress from structured training paired with nutrition guidance.',
+  // Large draggable before/after comparison
+  featured: {
+    before: '',
+    after: '',
+    beforeAlt: 'Client before',
+    afterAlt: 'Client after',
+  },
+  cards: [
+    {
+      duration: '7 Weeks',
+      goal: 'Weight Loss',
+      result: 'Reached target range',
+      clientGoal: 'Burn fat & tone muscle',
+      before: '',
+      after: '',
+    },
+    {
+      duration: '8 Weeks',
+      goal: 'Strength',
+      result: '[Result]',
+      clientGoal: '[describe goal]',
+      before: '',
+      after: '',
+    },
+    {
+      duration: '6 Weeks',
+      goal: 'Mobility',
+      result: '[Result]',
+      clientGoal: '[describe goal]',
+      before: '',
+      after: '',
+    },
+  ],
+  disclaimer: 'Shared with client permission.',
+}
