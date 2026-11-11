@@ -80,4 +80,33 @@
     overflow: hidden;
     z-index: 2;
   }
+
+  /* Renamed from .handle */
+  .ba-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    width: 4px;
+    background: #FF3D00;
+    z-index: 3;
+    cursor: ew-resize;
+    transform: translateX(-50%);
+  }
+
+  .ba-handle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: #FF3D00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(255, 61, 0, 0.4);
+  }
 }
