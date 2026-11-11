@@ -182,3 +182,25 @@ export const strengths = {
     caption: 'Average time for clients to reach their target weight-loss range',
   },
 }
+
+// Replace the placeholders with real, client-approved testimonials.
+export const testimonials = {
+  headline: 'SUCCESS STORIES.',
+  items: [
+    {
+      quote: '[Client testimonial here.]',
+      name: '[Client name]',
+      program: 'One-on-One Coaching',
+    },
+    {
+      quote: '[Client testimonial here.]',
+      name: '[Client name]',
+      program: 'Group Boot Camp',
+    },
+    {
+      quote: '[Client testimonial here.]',
+      name: '[Client name]',
+      program: 'Nutrition & Accountability',
+    },
+  ],
+}
