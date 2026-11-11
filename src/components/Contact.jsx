@@ -25,13 +25,13 @@ export default function Contact() {
             href={contact.phone.href}
             className="flex items-center gap-3 hover:text-accent transition-colors"
           >
-            <Phone className="text-xl" /> {contact.phone.label}
+            <Phone className="text-xl h-7" /> {contact.phone.label}
           </a>
           <a
             href={contact.email.href}
             className="flex items-center gap-3 hover:text-accent transition-colors"
           >
-            <Envelope className="text-xl" /> {contact.email.label}
+            <Envelope className="text-xl h-7" /> {contact.email.label}
           </a>
           <a
             href={contact.linkedin.href}
@@ -39,7 +39,7 @@ export default function Contact() {
             rel="noopener"
             className="flex items-center gap-3 hover:text-accent transition-colors"
           >
-            <LinkedinLogo className="text-xl" /> {contact.linkedin.label}
+            <LinkedinLogo className="text-xl h-7" /> {contact.linkedin.label}
           </a>
         </div>
 
