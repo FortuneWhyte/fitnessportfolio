@@ -21,3 +21,15 @@ export const nav = {
   ],
   cta: { label: 'Book a Session', href: '#contact' },
 }
+
+export const hero = {
+  eyebrow: 'Fortune Whyte — Fitness Coach · Regina, SK',
+  headline: ['STRONGER.', 'FITTER.', 'ACCOUNTABLE.'],
+  subheading:
+    'Personalized strength, conditioning and nutrition coaching that gets real results in 6–8 weeks.',
+  primaryCta: { label: 'Book a Session', href: '#contact' },
+  secondaryCta: { label: 'See Results', href: '#results' },
+  image: '',
+  imageAlt: 'Fortune Whyte training',
+  imagePlaceholder: 'High Contrast Action Photo',
+}
