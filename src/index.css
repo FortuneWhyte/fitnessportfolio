@@ -109,4 +109,22 @@
     justify-content: center;
     box-shadow: 0 0 20px rgba(255, 61, 0, 0.4);
   }
+
+  /* Let vertical page scroll through on touch while horizontal drags move the slider */
+  .comparison-slider {
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .comparison-slider.is-dragging,
+  .comparison-slider.is-dragging * {
+    cursor: ew-resize;
+  }
+
+  /* The before image keeps the full slider width so it is clipped, not squashed */
+  .ba-before img {
+    width: var(--ba-width, 100%);
+    max-width: none;
+  }
 }
