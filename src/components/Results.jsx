@@ -81,6 +81,13 @@ export default function Results() {
           <ResultCard key={`${card.duration}-${card.goal}`} card={card} />
         ))}
       </Reveal>
+
+      <Reveal
+        as="p"
+        className="text-center mt-12 text-[10px] text-soft-gray uppercase tracking-[0.2em]"
+      >
+        {results.disclaimer}
+      </Reveal>
     </section>
   )
 }
