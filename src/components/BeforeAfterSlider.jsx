@@ -50,6 +50,21 @@ export default function BeforeAfterSlider({
     setDragging(false)
   }
 
+  const handleKeyDown = (event) => {
+    const step = event.shiftKey ? 10 : 2
+    const keys = {
+      ArrowLeft: (p) => p - step,
+      ArrowDown: (p) => p - step,
+      ArrowRight: (p) => p + step,
+      ArrowUp: (p) => p + step,
+      Home: () => 0,
+      End: () => 100,
+    }
+    if (!keys[event.key]) return
+    event.preventDefault()
+    setPosition((p) => clamp(keys[event.key](p)))
+  }
+
   return (
     <div
       ref={sliderRef}
@@ -93,7 +108,17 @@ export default function BeforeAfterSlider({
         </div>
       )}
 
-      <div className="ba-handle" style={{ left: `${position}%` }} />
+      <div
+        className="ba-handle"
+        style={{ left: `${position}%` }}
+        role="slider"
+        tabIndex={0}
+        aria-label="Before and after comparison"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={Math.round(position)}
+        onKeyDown={handleKeyDown}
+      />
     </div>
   )
 }
