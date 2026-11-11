@@ -162,3 +162,23 @@ export const approach = {
     },
   ],
 }
+
+export const strengths = {
+  title: 'Coaching Strengths',
+  items: [
+    'Form Cueing',
+    'Scaling for All Levels',
+    'Circuit Training',
+    'HIIT',
+    'Program Design',
+    'Strength & Conditioning',
+    'Mobility',
+    'Nutrition Guidance',
+    'Motivation & Accountability',
+  ],
+  highlight: {
+    value: '6–8',
+    unit: 'Weeks',
+    caption: 'Average time for clients to reach their target weight-loss range',
+  },
+}
