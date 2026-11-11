@@ -67,3 +67,31 @@ export const about = {
     },
   ],
 }
+
+// Service icons: 'barbell' | 'users-three' | 'clipboard-text'
+export const services = {
+  label: 'Section 02',
+  headline: 'CORE SERVICES.',
+  linkLabel: 'Learn more',
+  linkHref: '#contact',
+  items: [
+    {
+      icon: 'barbell',
+      title: 'One-on-One Coaching',
+      description:
+        'Custom programs that combine strength, conditioning and mobility, adapted to your specific injury history and personal milestones.',
+    },
+    {
+      icon: 'users-three',
+      title: 'Small-Group Boot Camps',
+      description:
+        'High-energy circuit and HIIT sessions for groups of 4–5, scaled for every fitness level to ensure everyone gets a push.',
+    },
+    {
+      icon: 'clipboard-text',
+      title: 'Nutrition & Accountability',
+      description:
+        'Structured diet guidance, progress tracking and weekly check-ins to ensure your kitchen habits match your gym performance.',
+    },
+  ],
+}
