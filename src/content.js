@@ -204,3 +204,17 @@ export const testimonials = {
     },
   ],
 }
+
+export const contact = {
+  headline: ['READY TO', 'START?'],
+  subheading: "Let's build a plan around your goals.",
+  cta: { label: 'Book a Session', href: 'mailto:greatfortunewhyte@yahoo.com' },
+  phone: { label: '306-510-6235', href: 'tel:3065106235' },
+  email: { label: 'greatfortunewhyte@yahoo.com', href: 'mailto:greatfortunewhyte@yahoo.com' },
+  linkedin: { label: 'LinkedIn', href: 'https://linkedin.com/in/great-fortune-abiye-whyte' },
+}
+
+export const footer = {
+  text: '© Fortune Whyte · Regina, SK',
+  year: 2026,
+}
