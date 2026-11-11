@@ -17,7 +17,7 @@ npm run preview  # serve the production build locally
 
 All text on the site lives in [`src/content.js`](src/content.js): headlines, stats, services, results, approach steps, strengths, testimonials and contact details. Change a string there and the page updates; you don't need to touch the components.
 
-- **Stats**: an entry with `count` animates up from 0 (`{ count: 3, suffix: '+' }`). An entry with `value` is shown as-is (`{ value: '6–8' }`).
+- **Stats**: an entry with `count` animates up from 0 (`{ count: 3, suffix: '+' }`). An entry with `value` is shown as-is (`{ value: '10–12' }`).
 - **Icons**: services and About badges take an `icon` key. The keys you can use are listed in a comment above each section.
 - **Placeholders**: the testimonials and two of the result cards still have placeholder text (`[Client testimonial here.]`, `[Result]`, `[describe goal]`). Replace these with real, client-approved content before launch.
 

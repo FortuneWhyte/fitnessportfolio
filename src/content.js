@@ -38,7 +38,7 @@ export const hero = {
 export const stats = [
   { count: 3, suffix: '+', label: 'Years Coaching' },
   { count: 6, suffix: '+', label: 'Years Athletic Training' },
-  { value: '6–8', label: 'Week Transformations' },
+  { value: '10–12', label: 'Week Transformations' },
   { value: 'YES', label: 'CPR/AED Certified' },
 ]
 
@@ -177,7 +177,7 @@ export const strengths = {
     'Motivation & Accountability',
   ],
   highlight: {
-    value: '6–8',
+    value: '10–12',
     unit: 'Weeks',
     caption: 'Average time for clients to reach their target weight-loss range',
   },
