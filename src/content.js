@@ -135,3 +135,30 @@ export const results = {
   ],
   disclaimer: 'Shared with client permission.',
 }
+
+export const approach = {
+  label: 'Section 04',
+  headline: 'THE BLUEPRINT.',
+  steps: [
+    {
+      number: '01',
+      title: 'Assess',
+      description: 'Understanding your goals, current fitness level, and detailed injury history.',
+    },
+    {
+      number: '02',
+      title: 'Program',
+      description: 'Personalized strength, conditioning and mobility plan tailored to your data.',
+    },
+    {
+      number: '03',
+      title: 'Coach',
+      description: 'High-energy sessions with expert form cueing and dynamic scaling.',
+    },
+    {
+      number: '04',
+      title: 'Track',
+      description: 'Nutrition guidance, documented progress and absolute accountability.',
+    },
+  ],
+}
