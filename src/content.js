@@ -26,7 +26,7 @@ export const hero = {
   eyebrow: 'Fortune Whyte — Fitness Coach · Regina, SK',
   headline: ['STRONGER.', 'FITTER.', 'ACCOUNTABLE.'],
   subheading:
-    'Personalized strength, conditioning and nutrition coaching that gets real results in 6–8 weeks.',
+    'Personalized strength, conditioning and nutrition coaching that gets real results in 10–12 weeks.',
   primaryCta: { label: 'Book a Session', href: '#contact' },
   secondaryCta: { label: 'See Results', href: '#results' },
   image: '',
