@@ -9,6 +9,10 @@ export default {
         charcoal: '#16171A',
         'soft-gray': '#A1A1AA',
       },
+      fontFamily: {
+        heading: ['Anton', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [],
