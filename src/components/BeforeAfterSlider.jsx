@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Image as ImageIcon } from '@phosphor-icons/react'
 
 const clamp = (value) => Math.min(100, Math.max(0, value))
@@ -13,6 +13,16 @@ export default function BeforeAfterSlider({
   const sliderRef = useRef(null)
   const [position, setPosition] = useState(50)
   const [dragging, setDragging] = useState(false)
+  const [width, setWidth] = useState(0)
+
+  // Track the slider width so the before image is clipped rather than squashed
+  useEffect(() => {
+    const node = sliderRef.current
+    if (!node || typeof ResizeObserver === 'undefined') return
+    const observer = new ResizeObserver(([entry]) => setWidth(entry.contentRect.width))
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
 
   const moveTo = useCallback((clientX) => {
     const rect = sliderRef.current?.getBoundingClientRect()
@@ -50,6 +60,7 @@ export default function BeforeAfterSlider({
       onPointerMove={handlePointerMove}
       onPointerUp={stopDragging}
       onPointerCancel={stopDragging}
+      style={width ? { '--ba-width': `${width}px` } : undefined}
     >
       <div className="absolute top-4 left-4 z-30 bg-black/60 px-4 py-1 text-[10px] font-bold tracking-widest uppercase rounded">
         Before
