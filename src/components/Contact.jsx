@@ -42,6 +42,10 @@ export default function Contact() {
             <LinkedinLogo className="text-xl" /> {contact.linkedin.label}
           </a>
         </div>
+
+        <footer className="text-xs text-white/30 tracking-[0.4em] uppercase">
+          {footer.text} · {footer.year}
+        </footer>
       </Reveal>
     </section>
   )
