@@ -1,5 +1,6 @@
 import { Barbell } from '@phosphor-icons/react'
-import { hero } from '../content.js'
+import { hero, stats } from '../content.js'
+import Counter from './Counter.jsx'
 import Reveal from './Reveal.jsx'
 
 function withBreaks(lines) {
@@ -70,6 +71,24 @@ export default function Hero() {
           )}
         </div>
       </div>
+
+      <Reveal className="mt-auto pb-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
+        {stats.map((stat) => (
+          <div key={stat.label} className="bg-charcoal border-l-2 border-accent p-6">
+            <p className="font-heading text-3xl mb-1">
+              {stat.count != null ? (
+                <>
+                  <Counter target={stat.count} />
+                  {stat.suffix}
+                </>
+              ) : (
+                stat.value
+              )}
+            </p>
+            <p className="text-[10px] text-soft-gray uppercase tracking-widest">{stat.label}</p>
+          </div>
+        ))}
+      </Reveal>
     </section>
   )
 }
