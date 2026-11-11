@@ -33,3 +33,11 @@ export const hero = {
   imageAlt: 'Fortune Whyte training',
   imagePlaceholder: 'High Contrast Action Photo',
 }
+
+// `count` animates up from 0 when visible; `value` is shown as-is.
+export const stats = [
+  { count: 3, suffix: '+', label: 'Years Coaching' },
+  { count: 6, suffix: '+', label: 'Years Athletic Training' },
+  { value: '6–8', label: 'Week Transformations' },
+  { value: 'YES', label: 'CPR/AED Certified' },
+]
