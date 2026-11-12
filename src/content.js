@@ -183,7 +183,7 @@ export const strengths = {
   },
 }
 
-// Replace the placeholders with real, client-approved testimonials.
+// Each testimonial: quote, name, and optionally age and/or program (shown as "Age 23 · Program").
 export const testimonials = {
   headline: 'SUCCESS STORIES.',
   items: [

@@ -16,7 +16,9 @@ export default function Testimonials() {
             <p className="text-lg leading-relaxed mb-8 italic">"{item.quote}"</p>
             <div>
               <p className="font-bold">{item.name}</p>
-              <p className="text-xs text-soft-gray uppercase tracking-widest">{item.program}</p>
+              <p className="text-xs text-soft-gray uppercase tracking-widest">
+                {[item.age && `Age ${item.age}`, item.program].filter(Boolean).join(' · ')}
+              </p>
             </div>
           </div>
         ))}
