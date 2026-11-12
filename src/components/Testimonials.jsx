@@ -11,9 +11,9 @@ export default function Testimonials() {
 
       <Reveal className="grid md:grid-cols-3 gap-8">
         {testimonials.items.map((item, i) => (
-          <div key={i} className="bg-charcoal p-10 rounded-2xl relative border border-white/5">
+          <div key={i} className="bg-charcoal p-10 rounded-2xl relative border border-white/5 flex flex-col">
             <Quotes className="text-6xl text-accent mb-6 block opacity-50" />
-            <p className="text-lg leading-relaxed mb-8 italic">"{item.quote}"</p>
+            <p className="text-lg leading-relaxed mb-8 italic flex-1">"{item.quote}"</p>
             <div>
               <p className="font-bold">{item.name}</p>
               <p className="text-xs text-soft-gray uppercase tracking-widest">
