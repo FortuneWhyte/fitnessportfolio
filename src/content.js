@@ -47,7 +47,7 @@ export const about = {
   label: 'Section 01',
   headline: ['ATHLETE FIRST.', 'COACH ALWAYS.'],
   body: "I've trained consistently for 6+ years as a football and track & field athlete. Since 2023 I've coached clients one-on-one and led small-group boot camps, building programs around each person's goals, fitness level and injury history.",
-  image: '',
+  image: '/images/about-portrait.jpg',
   imageAlt: 'Portrait of Fortune Whyte',
   badges: [
     {
