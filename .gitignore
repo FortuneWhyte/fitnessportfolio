@@ -19,3 +19,6 @@ npm-debug.log*
 .env
 .env.*
 !.env.example
+
+# original, full-size photos (contain camera/GPS metadata); web copies go in public/images
+portfolio_photos/
