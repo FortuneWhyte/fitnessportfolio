@@ -94,7 +94,38 @@ export default function Results() {
             <br />
             {featured.headline[1]}
           </h3>
-          <p className="text-soft-gray text-lg leading-relaxed">{featured.body}</p>
+          <p className="text-soft-gray text-lg leading-relaxed mb-10">{featured.body}</p>
+
+          {featured.timeline?.length > 0 && (
+            <ol className="relative grid grid-cols-3 gap-3 md:gap-4">
+              {featured.timeline.map((step, i) => {
+                const isLatest = i === featured.timeline.length - 1
+                return (
+                  <li key={step.label}>
+                    <div
+                      className={`aspect-[3/4] rounded-xl overflow-hidden border ${
+                        isLatest ? 'border-accent' : 'border-white/10'
+                      }`}
+                    >
+                      <img
+                        src={step.image}
+                        alt={`Fortune Whyte, ${step.label}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p
+                      className={`mt-3 text-[10px] font-bold uppercase tracking-widest ${
+                        isLatest ? 'text-accent' : 'text-soft-gray'
+                      }`}
+                    >
+                      {step.label}
+                    </p>
+                  </li>
+                )
+              })}
+            </ol>
+          )}
         </div>
       </Reveal>
 
