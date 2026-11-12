@@ -175,6 +175,19 @@ export const approach = {
       description: 'Nutrition guidance, documented progress and absolute accountability.',
     },
   ],
+  // Real footage from a one-on-one session (shared with the client's permission)
+  session: {
+    eyebrow: 'Inside a session',
+    headline: ['HANDS-ON.', 'EVERY REP.'],
+    body: 'Real footage from a one-on-one session: demonstrating the movement, cueing form in real time and adjusting as the client works.',
+    video: '/videos/session-cueing.mp4',
+    videoPoster: '/videos/session-cueing-poster.jpg',
+    videoLabel: 'Fortune coaching a client through kneeling cable crunches',
+    photos: [
+      { image: '/images/session-cueing.jpg', caption: 'Form cueing', alt: 'Fortune cueing a client mid-rep' },
+      { image: '/images/session-coaching.jpg', caption: 'One-on-one', alt: 'Fortune watching a client complete a set' },
+    ],
+  },
 }
 
 export const strengths = {
