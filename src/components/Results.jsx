@@ -66,14 +66,36 @@ export default function Results() {
         <p className="text-soft-gray max-w-2xl mx-auto text-lg">{results.intro}</p>
       </Reveal>
 
-      <Reveal className="mb-24">
-        <BeforeAfterSlider
-          className="rounded-2xl"
-          before={featured.before}
-          after={featured.after}
-          beforeAlt={featured.beforeAlt}
-          afterAlt={featured.afterAlt}
-        />
+      <Reveal className="mb-24 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="w-full max-w-md mx-auto">
+          <BeforeAfterSlider
+            portrait
+            className="rounded-2xl"
+            before={featured.before}
+            after={featured.after}
+            beforeAlt={featured.beforeAlt}
+            afterAlt={featured.afterAlt}
+            beforeLabel={featured.beforeLabel}
+            afterLabel={featured.afterLabel}
+          />
+          {featured.hint && (
+            <p className="text-center mt-4 text-[10px] text-soft-gray uppercase tracking-[0.2em]">
+              {featured.hint}
+            </p>
+          )}
+        </div>
+
+        <div>
+          <span className="text-accent font-bold tracking-[0.3em] uppercase text-sm mb-4 block">
+            {featured.eyebrow}
+          </span>
+          <h3 className="font-heading text-5xl md:text-7xl leading-none mb-6">
+            {featured.headline[0]}
+            <br />
+            {featured.headline[1]}
+          </h3>
+          <p className="text-soft-gray text-lg leading-relaxed">{featured.body}</p>
+        </div>
       </Reveal>
 
       <Reveal className="grid md:grid-cols-3 gap-8">
