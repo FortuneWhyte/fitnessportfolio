@@ -122,6 +122,12 @@
     cursor: ew-resize;
   }
 
+  /* Portrait variant for phone photos: the frame follows the image's 3:4 ratio */
+  .comparison-slider--portrait {
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
   /* The before image keeps the full slider width so it is clipped, not squashed */
   .ba-before img {
     width: var(--ba-width, 100%);
