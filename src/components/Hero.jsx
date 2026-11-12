@@ -1,6 +1,7 @@
 import { Barbell } from '@phosphor-icons/react'
 import { hero, stats } from '../content.js'
 import Counter from './Counter.jsx'
+import VideoLoop from './VideoLoop.jsx'
 import Reveal from './Reveal.jsx'
 
 function withBreaks(lines) {
@@ -57,8 +58,20 @@ export default function Hero() {
         <div className="absolute top-0 right-0 w-full lg:w-[55%] h-full opacity-40 lg:opacity-100 pointer-events-none overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-ink z-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent z-10" />
-          {hero.image ? (
-            <img src={hero.image} alt={hero.imageAlt} className="w-full h-full object-cover" />
+          {hero.video ? (
+            <VideoLoop
+              src={hero.video}
+              poster={hero.videoPoster}
+              label={hero.imageAlt}
+              preload="auto"
+              className="w-full h-full object-cover grayscale contrast-125"
+            />
+          ) : hero.image ? (
+            <img
+              src={hero.image}
+              alt={hero.imageAlt}
+              className="w-full h-full object-cover grayscale contrast-125"
+            />
           ) : (
             <div className="w-full h-full bg-gray-800 flex items-center justify-center">
               <div className="flex flex-col items-center">
