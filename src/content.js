@@ -29,8 +29,11 @@ export const hero = {
     'Personalized strength, conditioning and nutrition coaching that gets real results in 10–12 weeks.',
   primaryCta: { label: 'Book a Session', href: '#contact' },
   secondaryCta: { label: 'See Results', href: '#results' },
+  // Background media: a video (with poster) takes priority over a still image.
+  video: '/videos/hero-session.mp4',
+  videoPoster: '/videos/hero-session-poster.jpg',
   image: '',
-  imageAlt: 'Fortune Whyte training',
+  imageAlt: 'Fortune Whyte coaching a client through a kneeling cable crunch',
   imagePlaceholder: 'High Contrast Action Photo',
 }
 
