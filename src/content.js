@@ -200,9 +200,10 @@ export const testimonials = {
       age: 23,
     },
     {
-      quote: '[Client testimonial here.]',
-      name: '[Client name]',
-      program: 'Nutrition & Accountability',
+      quote:
+        "I've been training with Fortune for about 2 years now. I play football with him, even after having my daughter. His level of discipline is exceptional, not just with fitness, but it will influence other areas of your life.",
+      name: 'Emenike Chukwodi',
+      age: 38,
     },
   ],
 }
