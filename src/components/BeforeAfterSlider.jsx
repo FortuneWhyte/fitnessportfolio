@@ -8,6 +8,9 @@ export default function BeforeAfterSlider({
   after,
   beforeAlt = 'Before',
   afterAlt = 'After',
+  beforeLabel = 'Before',
+  afterLabel = 'After',
+  portrait = false,
   className = '',
 }) {
   const sliderRef = useRef(null)
@@ -68,7 +71,12 @@ export default function BeforeAfterSlider({
   return (
     <div
       ref={sliderRef}
-      className={['comparison-slider', dragging && 'is-dragging', className]
+      className={[
+        'comparison-slider',
+        portrait && 'comparison-slider--portrait',
+        dragging && 'is-dragging',
+        className,
+      ]
         .filter(Boolean)
         .join(' ')}
       onPointerDown={handlePointerDown}
@@ -78,10 +86,10 @@ export default function BeforeAfterSlider({
       style={width ? { '--ba-width': `${width}px` } : undefined}
     >
       <div className="absolute top-4 left-4 z-30 bg-black/60 px-4 py-1 text-[10px] font-bold tracking-widest uppercase rounded">
-        Before
+        {beforeLabel}
       </div>
       <div className="absolute top-4 right-4 z-30 bg-accent px-4 py-1 text-[10px] text-white font-bold tracking-widest uppercase rounded">
-        After
+        {afterLabel}
       </div>
 
       <div className="ba-before" style={{ width: `${position}%` }}>
