@@ -188,9 +188,10 @@ export const testimonials = {
   headline: 'SUCCESS STORIES.',
   items: [
     {
-      quote: '[Client testimonial here.]',
-      name: '[Client name]',
-      program: 'One-on-One Coaching',
+      quote:
+        'Coach Whyte changed my life for the good.',
+      name: 'Maxwell Ajibona',
+      age: 23,
     },
     {
       quote: '[Client testimonial here.]',
