@@ -194,9 +194,10 @@ export const testimonials = {
       age: 23,
     },
     {
-      quote: '[Client testimonial here.]',
-      name: '[Client name]',
-      program: 'Group Boot Camp',
+      quote:
+        'From the history you can tell he knows his craft better than others. Experience is the best teacher.',
+      name: 'Dolapo Akindele',
+      age: 23,
     },
     {
       quote: '[Client testimonial here.]',
