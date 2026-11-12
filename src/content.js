@@ -23,7 +23,7 @@ export const nav = {
 }
 
 export const hero = {
-  eyebrow: 'Fortune Whyte — Fitness Coach · Regina, SK',
+  eyebrow: 'Great-Fortune Whyte — Fitness Coach · Regina, SK',
   headline: ['STRONGER.', 'FITTER.', 'ACCOUNTABLE.'],
   subheading:
     'Personalized strength, conditioning and nutrition coaching that gets real results in 10–12 weeks.',
