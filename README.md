@@ -13,6 +13,16 @@ npm run build    # production build into dist/
 npm run preview  # serve the production build locally
 ```
 
+## Deployment
+
+The site is hosted on Vercel at **https://fitnessportfolio.vercel.app**.
+
+- **Automatic:** every push to `main` on GitHub builds and deploys to production. Pushes to other branches get their own preview URL.
+- **Manual:** run `vercel --prod` from the project folder. You need the Vercel CLI (`npm i -g vercel`) and `vercel login`.
+- **Settings:** build settings and cache headers live in [`vercel.json`](vercel.json). Images and videos in `public/` are cached for a week. The hashed JS and CSS in `dist/assets/` are cached permanently.
+
+If you replace a photo or video but keep the same filename, visitors may see the old one for up to a week. Give the new file a new name and update `content.js` instead.
+
 ## Editing the copy
 
 All text on the site lives in [`src/content.js`](src/content.js): headlines, stats, services, results, approach steps, strengths, testimonials and contact details. Change a string there and the page updates; you don't need to touch the components.
