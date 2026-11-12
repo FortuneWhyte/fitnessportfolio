@@ -103,12 +103,23 @@ export const results = {
   label: 'Section 03',
   headline: ['REAL CLIENTS.', 'REAL RESULTS.'],
   intro: 'Documented progress from structured training paired with nutrition guidance.',
-  // Large draggable before/after comparison
+  // Large draggable before/after comparison: Fortune's own transformation
   featured: {
-    before: '',
-    after: '',
-    beforeAlt: 'Client before',
-    afterAlt: 'Client after',
+    eyebrow: "Coach's own transformation",
+    headline: ['PRACTICE WHAT', 'I PREACH.'],
+    body: 'I hold myself to the same standard I set for my clients. These are my own progress photos from August 2024 to July 2026: same training, same nutrition principles, same accountability.',
+    before: '/images/slider-before-2024-08.jpg',
+    after: '/images/slider-after-2026-07.jpg',
+    beforeLabel: 'Aug 2024',
+    afterLabel: 'Jul 2026',
+    beforeAlt: 'Fortune Whyte in August 2024',
+    afterAlt: 'Fortune Whyte in July 2026',
+    hint: 'Drag to compare',
+    timeline: [
+      { image: '/images/transformation-2024-08.jpg', label: 'Aug 2024' },
+      { image: '/images/transformation-2026-03.jpg', label: 'Mar 2026' },
+      { image: '/images/transformation-2026-07.jpg', label: 'Jul 2026' },
+    ],
   },
   cards: [
     {
