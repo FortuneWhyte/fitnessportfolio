@@ -245,6 +245,6 @@ export const contact = {
 }
 
 export const footer = {
-  text: '© Fortune Whyte · Regina, SK',
+  text: '© Great-Fortune Whyte · Regina, SK',
   year: 2026,
 }
