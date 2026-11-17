@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react'
 import { List, X } from '@phosphor-icons/react'
 import { nav } from '../content.js'
+import useActiveSection from '../hooks/useActiveSection.js'
+
+const sectionIds = nav.links.map((link) => link.href.slice(1))
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
+  const active = useActiveSection(sectionIds)
+  const isActive = (link) => link.href === `#${active}`
 
   // Close the phone menu with Escape, or when the screen grows past the md breakpoint
   useEffect(() => {
@@ -33,7 +38,8 @@ export default function Nav() {
           <a
             key={link.href}
             href={link.href}
-            className="transition-colors duration-300 hover:text-accent"
+            aria-current={isActive(link) ? 'location' : undefined}
+            className={`transition-colors duration-300 hover:text-accent ${isActive(link) ? 'text-accent' : ''}`}
           >
             {link.label}
           </a>
@@ -72,7 +78,8 @@ export default function Nav() {
               <a
                 href={link.href}
                 onClick={close}
-                className="block py-4 font-heading text-3xl tracking-tight border-b border-white/5 hover:text-accent transition-colors"
+                aria-current={isActive(link) ? 'location' : undefined}
+                className={`block py-4 font-heading text-3xl tracking-tight border-b border-white/5 hover:text-accent transition-colors ${isActive(link) ? 'text-accent' : ''}`}
               >
                 {link.label}
               </a>
