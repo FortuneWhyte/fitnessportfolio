@@ -29,9 +29,13 @@ export default function Contact() {
           </a>
           <a
             href={contact.email.href}
-            className="flex items-center gap-3 hover:text-accent transition-colors"
+            className="flex items-center gap-3 min-w-0 max-w-full hover:text-accent transition-colors"
           >
-            <Envelope className="text-xl h-7" /> {contact.email.label}
+            <Envelope className="text-xl h-7 shrink-0" />
+            <span className="[overflow-wrap:anywhere] max-[379px]:tracking-wider">
+              {contact.email.label.split('@')[0]}@<wbr />
+              {contact.email.label.split('@')[1]}
+            </span>
           </a>
           <a
             href={contact.linkedin.href}
