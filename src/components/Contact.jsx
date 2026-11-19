@@ -1,5 +1,6 @@
 import { Envelope, LinkedinLogo, Phone } from '@phosphor-icons/react'
 import { contact, footer } from '../content.js'
+import EnquiryForm from './EnquiryForm.jsx'
 import Reveal from './Reveal.jsx'
 
 export default function Contact() {
@@ -13,12 +14,9 @@ export default function Contact() {
         </h2>
         <p className="text-2xl text-soft-gray mb-12">{contact.subheading}</p>
 
-        <a
-          href={contact.cta.href}
-          className="inline-block bg-accent text-white px-16 py-8 rounded-full font-heading text-3xl hover:scale-105 transition-transform duration-300 mb-20 shadow-[0_0_50px_rgba(255,61,0,0.3)]"
-        >
-          {contact.cta.label}
-        </a>
+        <div className="max-w-2xl mx-auto mb-20">
+          <EnquiryForm />
+        </div>
 
         <div className="flex flex-wrap justify-center gap-12 text-sm font-semibold uppercase tracking-widest border-t border-white/10 pt-16 mb-20">
           <a

@@ -223,7 +223,21 @@ export const testimonials = {
 export const contact = {
   headline: ['READY TO', 'START?'],
   subheading: "Let's build a plan around your goals.",
-  cta: { label: 'Book a Session', href: 'mailto:greatfortunewhyte@yahoo.com' },
+  // Enquiry form. Sends via /api/enquiry; if that isn't set up yet it opens
+  // the visitor's email app with their message filled in instead.
+  form: {
+    submitLabel: 'Book a Session',
+    sendingLabel: 'Sending…',
+    interestLabel: 'I’m interested in',
+    // The service titles from `services` are listed first, then these
+    extraInterests: ['Not sure yet'],
+    contactHint: 'Email or phone, whichever you prefer.',
+    messagePlaceholder: 'Your goals, schedule, any injuries I should know about…',
+    success: 'Thanks! Your enquiry is in. I’ll be in touch soon.',
+    fallback:
+      'Your email app should open with your message ready to send. If it doesn’t, use the email or phone below.',
+    error: 'Something went wrong. Please email or call me using the details below.',
+  },
   phone: { label: '306-510-6235', href: 'tel:3065106235' },
   email: { label: 'greatfortunewhyte@yahoo.com', href: 'mailto:greatfortunewhyte@yahoo.com' },
   linkedin: { label: 'LinkedIn', href: 'https://linkedin.com/in/great-fortune-abiye-whyte' },
