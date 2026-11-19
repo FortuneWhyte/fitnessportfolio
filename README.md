@@ -25,11 +25,33 @@ If you replace a photo or video but keep the same filename, visitors may see the
 
 ## Editing the copy
 
-All text on the site lives in [`src/content.js`](src/content.js): headlines, stats, services, results, approach steps, strengths, testimonials and contact details. Change a string there and the page updates; you don't need to touch the components.
+All text on the site lives in [`src/content.js`](src/content.js): headlines, stats, services, results, approach steps, strengths, testimonials, packages, the enquiry form and contact details. Change a string there and the page updates; you don't need to touch the components.
 
 - **Stats**: an entry with `count` animates up from 0 (`{ count: 3, suffix: '+' }`). An entry with `value` is shown as-is (`{ value: '10–12' }`).
 - **Icons**: services and About badges take an `icon` key. The keys you can use are listed in a comment above each section.
-- **Placeholders**: the testimonials and two of the result cards still have placeholder text (`[Client testimonial here.]`, `[Result]`, `[describe goal]`). Replace these with real, client-approved content before launch.
+- **Prices**: each package in `packages.items` has a `price` (e.g. `'$60'`) and `priceNote` (e.g. `'per session'`). While `price` is `''` the card shows "Ask for pricing".
+- **Client result cards**: add entries to `results.cards` as clients share results. The grid adapts: one card is centred, two share a row, three or more use three columns.
+
+## Enquiry form
+
+The contact form posts to a Vercel serverless function, [`api/enquiry.js`](api/enquiry.js), which emails the enquiry to you via [Resend](https://resend.com) (free tier: 100 emails a day).
+
+**Until it's set up, the form still works.** It opens the visitor's own email app with their enquiry already written, addressed to you. The same happens in local development (`npm run dev` doesn't run the `api/` folder).
+
+To have enquiries emailed straight to your inbox:
+
+1. Sign up at resend.com **using the email address that should receive enquiries**, and create an API key.
+2. In Vercel, open the project → **Settings → Environment Variables** and add `RESEND_API_KEY` with that key.
+3. Redeploy (Deployments → ⋯ → Redeploy), or push any commit.
+
+Optional variables:
+
+| Variable       | Default                                     | Purpose                                                                              |
+| -------------- | ------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `ENQUIRY_TO`   | `greatfortunewhyte@yahoo.com`               | Inbox that receives enquiries                                                        |
+| `ENQUIRY_FROM` | `Website enquiry <onboarding@resend.dev>`   | Sender. Resend's test sender only delivers to the Resend account's own email, so to use another `ENQUIRY_TO`, verify a domain in Resend and send from it |
+
+Replying to an enquiry email replies directly to the visitor (when they left an email address).
 
 ## Adding photos and videos
 
@@ -76,8 +98,10 @@ src/
   index.css           Tailwind directives + custom component styles
   content.js          All editable copy and image paths
   hooks/useInView.js  IntersectionObserver hook (fires once)
-  components/         One component per section, plus Reveal, Counter
-                      and BeforeAfterSlider
+  hooks/useActiveSection.js  Which section is on screen (nav highlight)
+  components/         One component per section, plus Reveal, Counter,
+                      BeforeAfterSlider, EnquiryForm and BackToTop
+api/enquiry.js        Serverless function that emails form enquiries
 scripts/              optimize-media.sh for preparing photos and videos
 public/               Static files served from / (images/, videos/)
 variant-export.html   Original design-tool export, kept for reference
