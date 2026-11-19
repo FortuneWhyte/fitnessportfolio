@@ -121,28 +121,13 @@ export const results = {
       { image: '/images/transformation-2026-07.jpg', label: 'Jul 2026' },
     ],
   },
+  // Client result cards. Add more entries (up to 3 per row) as clients share results.
   cards: [
     {
       duration: '7 Weeks',
       goal: 'Weight Loss',
       result: 'Reached target range',
       clientGoal: 'Burn fat & tone muscle',
-      before: '',
-      after: '',
-    },
-    {
-      duration: '8 Weeks',
-      goal: 'Strength',
-      result: '[Result]',
-      clientGoal: '[describe goal]',
-      before: '',
-      after: '',
-    },
-    {
-      duration: '6 Weeks',
-      goal: 'Mobility',
-      result: '[Result]',
-      clientGoal: '[describe goal]',
       before: '',
       after: '',
     },

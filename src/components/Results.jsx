@@ -2,6 +2,12 @@ import { results } from '../content.js'
 import BeforeAfterSlider from './BeforeAfterSlider.jsx'
 import Reveal from './Reveal.jsx'
 
+// Card grid adapts to however many client results are listed in content.js
+const cardGrid = {
+  1: 'max-w-md mx-auto',
+  2: 'grid md:grid-cols-2 gap-8 max-w-4xl mx-auto',
+}
+
 function ResultCard({ card }) {
   return (
     <div className="bg-charcoal rounded-2xl overflow-hidden border border-white/5">
@@ -129,11 +135,13 @@ export default function Results() {
         </div>
       </Reveal>
 
-      <Reveal className="grid md:grid-cols-3 gap-8">
-        {results.cards.map((card) => (
-          <ResultCard key={`${card.duration}-${card.goal}`} card={card} />
-        ))}
-      </Reveal>
+      {results.cards.length > 0 && (
+        <Reveal className={cardGrid[results.cards.length] ?? 'grid md:grid-cols-3 gap-8'}>
+          {results.cards.map((card) => (
+            <ResultCard key={`${card.duration}-${card.goal}`} card={card} />
+          ))}
+        </Reveal>
+      )}
 
       <Reveal
         as="p"
