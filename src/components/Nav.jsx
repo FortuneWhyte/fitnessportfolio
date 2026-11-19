@@ -10,11 +10,11 @@ export default function Nav() {
   const active = useActiveSection(sectionIds)
   const isActive = (link) => link.href === `#${active}`
 
-  // Close the phone menu with Escape, or when the screen grows past the md breakpoint
+  // Close the phone menu with Escape, or when the screen grows past the lg breakpoint
   useEffect(() => {
     if (!open) return
     const onKey = (e) => e.key === 'Escape' && setOpen(false)
-    const mq = window.matchMedia('(min-width: 768px)')
+    const mq = window.matchMedia('(min-width: 1024px)')
     const onResize = () => mq.matches && setOpen(false)
     window.addEventListener('keydown', onKey)
     mq.addEventListener('change', onResize)
@@ -33,7 +33,7 @@ export default function Nav() {
         <span className="text-accent">{nav.logo.accent}</span>
       </a>
 
-      <div className="hidden md:flex items-center gap-10 text-sm font-semibold uppercase tracking-widest">
+      <div className="hidden lg:flex items-center gap-6 xl:gap-10 text-sm font-semibold uppercase tracking-widest">
         {nav.links.map((link) => (
           <a
             key={link.href}
@@ -61,7 +61,7 @@ export default function Nav() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? 'Close menu' : 'Open menu'}
-          className="md:hidden -mr-2 p-2 text-2xl hover:text-accent transition-colors"
+          className="lg:hidden -mr-2 p-2 text-2xl hover:text-accent transition-colors"
         >
           {open ? <X /> : <List />}
         </button>
@@ -70,7 +70,7 @@ export default function Nav() {
       <div
         id="mobile-menu"
         hidden={!open}
-        className="md:hidden absolute top-full left-0 w-full bg-ink border-b border-white/10 shadow-2xl"
+        className="lg:hidden absolute top-full left-0 w-full bg-ink border-b border-white/10 shadow-2xl"
       >
         <ul className="flex flex-col px-8 py-4">
           {nav.links.map((link) => (

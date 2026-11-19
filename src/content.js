@@ -17,6 +17,7 @@ export const nav = {
     { label: 'Coaching', href: '#coaching' },
     { label: 'Results', href: '#results' },
     { label: 'Approach', href: '#approach' },
+    { label: 'Packages', href: '#packages' },
     { label: 'Contact', href: '#contact' },
   ],
   cta: { label: 'Book a Session', href: '#contact' },
