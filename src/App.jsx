@@ -6,6 +6,7 @@ import Results from './components/Results.jsx'
 import Approach from './components/Approach.jsx'
 import Strengths from './components/Strengths.jsx'
 import Testimonials from './components/Testimonials.jsx'
+import Packages from './components/Packages.jsx'
 import Contact from './components/Contact.jsx'
 import BackToTop from './components/BackToTop.jsx'
 
@@ -21,6 +22,7 @@ export default function App() {
       <Approach />
       <Strengths />
       <Testimonials />
+      <Packages />
       <Contact />
       <BackToTop />
     </>

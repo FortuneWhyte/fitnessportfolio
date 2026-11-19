@@ -220,6 +220,52 @@ export const testimonials = {
   ],
 }
 
+// Packages & pricing. Set `price` (e.g. '$60') and `priceNote` (e.g. 'per session')
+// to show a price; while `price` is '' the card shows `askLabel` instead.
+// `interest` must match a service title so the enquiry form is preselected.
+export const packages = {
+  label: 'Section 05',
+  headline: 'PACKAGES.',
+  intro: 'Pick a starting point. Every plan is built around your goals.',
+  askLabel: 'Ask for pricing',
+  ctaLabel: 'Enquire',
+  items: [
+    {
+      icon: 'barbell',
+      title: 'One-on-One',
+      interest: 'One-on-One Coaching',
+      price: '',
+      priceNote: '',
+      features: [
+        'Custom program built around your goals',
+        'Strength, conditioning & mobility',
+        'Adapted to your injury history',
+        'Personal milestones tracked',
+      ],
+    },
+    {
+      icon: 'users-three',
+      title: 'Boot Camp',
+      interest: 'Small-Group Boot Camps',
+      price: '',
+      priceNote: '',
+      features: [
+        'Small groups of 4–5',
+        'High-energy circuit & HIIT sessions',
+        'Scaled for every fitness level',
+      ],
+    },
+    {
+      icon: 'clipboard-text',
+      title: 'Nutrition',
+      interest: 'Nutrition & Accountability',
+      price: '',
+      priceNote: '',
+      features: ['Structured diet guidance', 'Progress tracking', 'Weekly check-ins'],
+    },
+  ],
+}
+
 export const contact = {
   headline: ['READY TO', 'START?'],
   subheading: "Let's build a plan around your goals.",
